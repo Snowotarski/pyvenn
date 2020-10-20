@@ -41,7 +41,7 @@ def draw_triangle(fig, ax, x1, y1, x2, y2, x3, y3, fillcolor):
         color=fillcolor)
     ax.add_patch(polygon)
 
-def draw_text(fig, ax, x, y, text, color=[0, 0, 0, 1], fontsize=14, ha="center", va="center"):
+def draw_text(fig, ax, x, y, text, color=[0, 0, 0, 1], fontsize=18, ha="center", va="center"):
     ax.text(
         x, y, text,
         horizontalalignment=ha,
@@ -141,8 +141,8 @@ def venn2(labels, names=['A', 'B'], **options):
     """
     colors = options.get('colors', [default_colors[i] for i in range(2)])
     figsize = options.get('figsize', (9, 7))
-    dpi = options.get('dpi', 96)
-    fontsize = options.get('fontsize', 14)
+    dpi = options.get('dpi', 180)
+    fontsize = options.get('fontsize', 18)
 
     fig = plt.figure(0, figsize=figsize, dpi=dpi)
     ax = fig.add_subplot(111, aspect='equal')
@@ -158,10 +158,10 @@ def venn2(labels, names=['A', 'B'], **options):
     draw_text(fig, ax, 0.50, 0.30, labels.get('11', ''), fontsize=fontsize)
 
     # legend
-    draw_text(fig, ax, 0.20, 0.56, names[0], colors[0], fontsize=fontsize, ha="right", va="bottom")
-    draw_text(fig, ax, 0.80, 0.56, names[1], colors[1], fontsize=fontsize, ha="left", va="bottom")
-    leg = ax.legend(names, loc='center left', bbox_to_anchor=(1.0, 0.5), fancybox=True)
-    leg.get_frame().set_alpha(0.5)
+    #draw_text(fig, ax, 0.20, 0.56, names[0], colors[0], fontsize=fontsize, ha="right", va="bottom")
+    #draw_text(fig, ax, 0.80, 0.56, names[1], colors[1], fontsize=fontsize, ha="left", va="bottom")
+    #leg = ax.legend(names, loc='center left', bbox_to_anchor=(1.0, 0.5), fancybox=True)
+    #leg.get_frame().set_alpha(0.5)
 
     return fig, ax
 
@@ -186,7 +186,7 @@ def venn3(labels, names=['A', 'B', 'C'], **options):
     colors = options.get('colors', [default_colors[i] for i in range(3)])
     figsize = options.get('figsize', (9, 9))
     dpi = options.get('dpi', 96)
-    fontsize = options.get('fontsize', 14)
+    fontsize = options.get('fontsize', 18)
 
     fig = plt.figure(0, figsize=figsize, dpi=dpi)
     ax = fig.add_subplot(111, aspect='equal')
@@ -207,11 +207,11 @@ def venn3(labels, names=['A', 'B', 'C'], **options):
     draw_text(fig, ax, 0.50, 0.51, labels.get('111', ''), fontsize=fontsize)
 
     # legend
-    draw_text(fig, ax, 0.15, 0.87, names[0], colors[0], fontsize=fontsize, ha="right", va="bottom")
-    draw_text(fig, ax, 0.85, 0.87, names[1], colors[1], fontsize=fontsize, ha="left", va="bottom")
-    draw_text(fig, ax, 0.50, 0.02, names[2], colors[2], fontsize=fontsize, va="top")
-    leg = ax.legend(names, loc='center left', bbox_to_anchor=(1.0, 0.5), fancybox=True)
-    leg.get_frame().set_alpha(0.5)
+    #draw_text(fig, ax, 0.15, 0.87, names[0], colors[0], fontsize=fontsize, ha="right", va="bottom")
+    #draw_text(fig, ax, 0.85, 0.87, names[1], colors[1], fontsize=fontsize, ha="left", va="bottom")
+    #draw_text(fig, ax, 0.50, 0.02, names[2], colors[2], fontsize=fontsize, va="top")
+    #leg = ax.legend(names, loc='center left', bbox_to_anchor=(1.0, 0.5), fancybox=True)
+    #leg.get_frame().set_alpha(0.5)
 
     return fig, ax
 
@@ -236,7 +236,7 @@ def venn4(labels, names=['A', 'B', 'C', 'D'], **options):
     colors = options.get('colors', [default_colors[i] for i in range(4)])
     figsize = options.get('figsize', (12, 12))
     dpi = options.get('dpi', 96)
-    fontsize = options.get('fontsize', 14)
+    fontsize = options.get('fontsize', 18)
 
     fig = plt.figure(0, figsize=figsize, dpi=dpi)
     ax = fig.add_subplot(111, aspect='equal')
@@ -266,12 +266,12 @@ def venn4(labels, names=['A', 'B', 'C', 'D'], **options):
     draw_text(fig, ax, 0.50, 0.38, labels.get('1111', ''), fontsize=fontsize)
 
     # legend
-    draw_text(fig, ax, 0.13, 0.18, names[0], colors[0], fontsize=fontsize, ha="right")
-    draw_text(fig, ax, 0.18, 0.83, names[1], colors[1], fontsize=fontsize, ha="right", va="bottom")
-    draw_text(fig, ax, 0.82, 0.83, names[2], colors[2], fontsize=fontsize, ha="left", va="bottom")
-    draw_text(fig, ax, 0.87, 0.18, names[3], colors[3], fontsize=fontsize, ha="left", va="top")
-    leg = ax.legend(names, loc='center left', bbox_to_anchor=(1.0, 0.5), fancybox=True)
-    leg.get_frame().set_alpha(0.5)
+    #draw_text(fig, ax, 0.13, 0.18, names[0], colors[0], fontsize=fontsize, ha="right")
+    #draw_text(fig, ax, 0.18, 0.83, names[1], colors[1], fontsize=fontsize, ha="right", va="bottom")
+    #draw_text(fig, ax, 0.82, 0.83, names[2], colors[2], fontsize=fontsize, ha="left", va="bottom")
+    #draw_text(fig, ax, 0.87, 0.18, names[3], colors[3], fontsize=fontsize, ha="left", va="top")
+    #leg = ax.legend(names, loc='center left', bbox_to_anchor=(1.0, 0.5), fancybox=True)
+    #leg.get_frame().set_alpha(0.5)
 
     return fig, ax
 
@@ -296,7 +296,7 @@ def venn5(labels, names=['A', 'B', 'C', 'D', 'E'], **options):
     colors = options.get('colors', [default_colors[i] for i in range(5)])
     figsize = options.get('figsize', (13, 13))
     dpi = options.get('dpi', 96)
-    fontsize = options.get('fontsize', 14)
+    fontsize = options.get('fontsize', 18)
 
     fig = plt.figure(0, figsize=figsize, dpi=dpi)
     ax = fig.add_subplot(111, aspect='equal')
@@ -343,13 +343,13 @@ def venn5(labels, names=['A', 'B', 'C', 'D', 'E'], **options):
     draw_text(fig, ax, 0.51, 0.47, labels.get('11111', ''), fontsize=fontsize)
 
     # legend
-    draw_text(fig, ax, 0.02, 0.72, names[0], colors[0], fontsize=fontsize, ha="right")
-    draw_text(fig, ax, 0.72, 0.94, names[1], colors[1], fontsize=fontsize, va="bottom")
-    draw_text(fig, ax, 0.97, 0.74, names[2], colors[2], fontsize=fontsize, ha="left")
-    draw_text(fig, ax, 0.88, 0.05, names[3], colors[3], fontsize=fontsize, ha="left")
-    draw_text(fig, ax, 0.12, 0.05, names[4], colors[4], fontsize=fontsize, ha="right")
-    leg = ax.legend(names, loc='center left', bbox_to_anchor=(1.0, 0.5), fancybox=True)
-    leg.get_frame().set_alpha(0.5)
+    #draw_text(fig, ax, 0.02, 0.72, names[0], colors[0], fontsize=fontsize, ha="right")
+    #draw_text(fig, ax, 0.72, 0.94, names[1], colors[1], fontsize=fontsize, va="bottom")
+    #draw_text(fig, ax, 0.97, 0.74, names[2], colors[2], fontsize=fontsize, ha="left")
+    #draw_text(fig, ax, 0.88, 0.05, names[3], colors[3], fontsize=fontsize, ha="left")
+    #draw_text(fig, ax, 0.12, 0.05, names[4], colors[4], fontsize=fontsize, ha="right")
+    #leg = ax.legend(names, loc='center left', bbox_to_anchor=(1.0, 0.5), fancybox=True)
+    #leg.get_frame().set_alpha(0.5)
 
     return fig, ax
 
@@ -374,8 +374,7 @@ def venn6(labels, names=['A', 'B', 'C', 'D', 'E'], **options):
     colors = options.get('colors', [default_colors[i] for i in range(6)])
     figsize = options.get('figsize', (20, 20))
     dpi = options.get('dpi', 96)
-    fontsize = options.get('fontsize', 14)
-
+    fontsize = options.get('fontsize', 18)
     fig = plt.figure(0, figsize=figsize, dpi=dpi)
     ax = fig.add_subplot(111, aspect='equal')
     ax.set_axis_off()
@@ -455,14 +454,14 @@ def venn6(labels, names=['A', 'B', 'C', 'D', 'E'], **options):
     draw_text(fig, ax, 0.501, 0.523, labels.get('111111', ''), fontsize=fontsize)
 
     # legend
-    draw_text(fig, ax, 0.674, 0.824, names[0], colors[0], fontsize=fontsize)
-    draw_text(fig, ax, 0.747, 0.751, names[1], colors[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.739, 0.396, names[2], colors[2], fontsize=fontsize)
-    draw_text(fig, ax, 0.700, 0.247, names[3], colors[3], fontsize=fontsize)
-    draw_text(fig, ax, 0.291, 0.255, names[4], colors[4], fontsize=fontsize)
-    draw_text(fig, ax, 0.203, 0.484, names[5], colors[5], fontsize=fontsize)
-    leg = ax.legend(names, loc='center left', bbox_to_anchor=(1.0, 0.5), fancybox=True)
-    leg.get_frame().set_alpha(0.5)
+    #draw_text(fig, ax, 0.674, 0.824, names[0], colors[0], fontsize=fontsize)
+    #draw_text(fig, ax, 0.747, 0.751, names[1], colors[1], fontsize=fontsize)
+    #draw_text(fig, ax, 0.739, 0.396, names[2], colors[2], fontsize=fontsize)
+    #draw_text(fig, ax, 0.700, 0.247, names[3], colors[3], fontsize=fontsize)
+    #draw_text(fig, ax, 0.291, 0.255, names[4], colors[4], fontsize=fontsize)
+    #draw_text(fig, ax, 0.203, 0.484, names[5], colors[5], fontsize=fontsize)
+    #leg = ax.legend(names, loc='center left', bbox_to_anchor=(1.0, 0.5), fancybox=True)
+    #leg.get_frame().set_alpha(0.5)
 
     return fig, ax
 
