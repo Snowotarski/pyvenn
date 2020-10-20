@@ -1,5 +1,6 @@
 # pyvenn
 2 ~ 6 Sets Venn Diagram For Python
+Current edits by Snowotarski : Removed legend, changed font size in venn.py
 
 Checkout this repository first:
 ```python
